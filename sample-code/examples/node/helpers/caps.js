@@ -11,7 +11,7 @@ exports.ios81 = {
   browserName: '',
   'appium-version': '1.6',
   platformName: 'iOS',
-  platformVersion: '8.1',
+  platformVersion: '10.0',
   deviceName: 'iPhone Simulator',
   app: undefined // will be set later
 };
