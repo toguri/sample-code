@@ -221,7 +221,7 @@ describe("ios complex", function () {
     });
   });
 
-  it.only("should get the source", function () {
+  it("should get the source", function () {
     var mainMenuSource;
     // main menu source
     return driver
