@@ -30,6 +30,7 @@
   },
     "scripts": {
     "ios-simple": "mocha ios-simple.js",
+    "ios-safari": "mocha ios-safari.js",
     "ios-complex": "mocha ios-complex.js",
     "ios-webview": "mocha ios-webview.js",
     "ios-actions": "mocha ios-actions.js",

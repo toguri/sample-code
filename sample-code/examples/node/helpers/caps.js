@@ -1,3 +1,4 @@
+/*
 exports.ios92 = {
   browserName: '',
   'appium-version': '1.3',
@@ -16,6 +17,25 @@ exports.ios81 = {
   app: undefined // will be set later
 };
 
+exports.ios100 = {
+  browserName: '',
+  'appium-version': '1.6',
+  platformName: 'iOS',
+  platformVersion: '10.0',
+  deviceName: 'iPhone Simulator',
+  app: undefined // will be set later
+};
+*/
+exports.ios93 = {
+  browserName: '',
+  'appium-version': '1.6',
+  platformName: 'iOS',
+  platformVersion: '9.3',
+  deviceName: 'iPhone 6s',
+  app: undefined // will be set later
+};
+
+/*
 exports.android18 = {
   browserName: '',
   'appium-version': '1.3',
@@ -34,6 +54,17 @@ exports.android19 = {
   app: undefined // will be set later
 };
 
+/*
+exports.android19 = {
+  browserName: '',
+  'appium-version': '1.6',
+  platformName: 'Android',
+  platformVersion: '4.4.2',
+  deviceName: 'Android Emulator',
+  app: undefined // will be set later
+};
+*/
+/*
 exports.selendroid16 = {
   browserName: '',
   'appium-version': '1.3',
@@ -43,3 +74,4 @@ exports.selendroid16 = {
   deviceName: 'Android Emulator',
   app: undefined // will be set later
 };
+*/

@@ -12,12 +12,13 @@ describe("ios safari", function () {
   var allPassed = true;
 
   before(function () {
-    var serverConfig = process.env.npm_package_config_sauce ?
-      serverConfigs.sauce : serverConfigs.local;
+    // var serverConfig = process.env.npm_package_config_sauce ?
+    //   serverConfigs.sauce : serverConfigs.local;
+    var serverConfig = serverConfigs.local;
     driver = wd.promiseChainRemote(serverConfig);
     require("./helpers/logging").configure(driver);
 
-    var desired = _.clone(require("./helpers/caps").ios81);
+    var desired = _.clone(require("./helpers/caps").ios93);
     desired.browserName = 'safari';
     if (process.env.npm_package_config_sauce) {
       desired.name = 'ios - safari';
@@ -56,8 +57,8 @@ describe("ios safari", function () {
     var complexCookieDelete = function(name, path, domain) {
       return function() {
         path = path || '|';
-        return driver.setCookie({name: name, value: '', path: path, 
-          domain: domain, expiry: 0});        
+        return driver.setCookie({name: name, value: '', path: path,
+          domain: domain, expiry: 0});
       };
     };
 
@@ -65,7 +66,7 @@ describe("ios safari", function () {
       .get('http://en.wikipedia.org')
       .waitForElementByCss('.mediawiki', 5000)
       .allCookies() // 'GeoIP' cookie is there
-      .deleteCookie('GeoIP') 
+      .deleteCookie('GeoIP')
       .allCookies() // 'GeoIP' is still there, because it is set on
                     // the .wikipedia.org domain
       .then(complexCookieDelete('GeoIP', '/', '.wikipedia.org'))

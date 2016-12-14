@@ -19,7 +19,7 @@ describe("ios local server", function () {
     driver = wd.promiseChainRemote(serverConfig);
     require("./helpers/logging").configure(driver);
 
-    var desired = _.clone(require("./helpers/caps").ios81);
+    var desired = _.clone(require("./helpers/caps").ios93);
     desired.app = require("./helpers/apps").iosWebviewAppLocal;
     if (process.env.npm_package_config_sauce) {
       desired.name = 'ios - local server';
